@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SlimeyCode</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Courier New, Courier New, Courier New;
+  margin: 3;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: Cyan;
+  color: Green;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 20px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: blue;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 2;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: underline overline;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: Gray;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>SlimeyCodes</h1>
+  <p>Some <b>Tips And Tricks</b> on creating a website.</p>
+</div>
+
+<div class="navbar">
+  <a href="https://www.instagram.com/addy.__.brownn">Instagram</a>
+  <a href="https://www.flowcode.com/page/addybrownn">My FlowPage(All Account Links)</a>
+  <a href="https://addybrownn.wordpress.com/" class="right">Example Of Privacy policy and Terms Of Use</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>About Me</h2>
+    <h5>I'm Addy Brownn aka ImSlimeyKing</h5>
+     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEVbpEZzwmBvvF1fqklTiEZeqEhaokRbokVcpUdwvV5tuFtXjklSh0Vhrkx1w2JwwVyZ0JFkrlBholFsu1lbqERntFRYmkVZk0tWlUVUj0SOv4WXyo9an0VQg0RXmEVQgkWz2rE3PP+rAAADxklEQVR4nO3dUXuaMBTGccQi1YotszhXtdv3/5RzF13zZuX0kCeIdv/34a6Y5Ce54DQGik2WLCXtvDfVSs7M07uR2VOxmeXIsgyy7AfO5114ZpmlcyuP4wgbhAjzBaE7CBGOFoTuIEQ4WkYSGsArE2rFUBpZSeZVfzo502rTjA4NIUKECBEiRIgQIcIvJLSSLPR3YWWAUD/YNWGsmkhzb6TyN2NEBtZ0/d5PhI1bqNfJFEryEC8hnCcKk4kIESJEiBAhQoQILyjMAhwk1BpMW70vrif3MrJOatdZsnBqVRhLmH4Np1aFQYgQ4fRBiBDh9EGYJryV+9IhQi0nrIpBkz5wbwdVHuHs+0OYO2/WdaJv7+5CBvbw7dLCU7JwnUZEiBAhQoQIESJEiBBhUSy8KfbrMLcjrL1ZqNAkIkSIECFChAgRIkSI0KyeaqO4+BpCf/V0q0KDiPBGhMxShNcvZJYivH4hsxTh9Qv9s9TsY4BQN2PoVnK/UIZ2Oi6kKPImvoZGBgnlskXCu0RhjRAhQoQIESJEiBDhQKFx562ok9HjKczPZOHJm7V89bawDXZ9t00rOe6S8lqfa4v3I0pd9x7HV28Pu2OY1hTq7pPKva9e475OCyms4njrynrInpm5W2gW7v55aQndHxuy7wkhQoQIESJEiBDhW9wDRej8nDzKtmq16AvLwW0uYTRnxxBKD/rIsEgYZntAiBAhQoQIESJEiDBn/MLozruT6LrFn2fi/j0qv0n/pldmt+/Pzs+Vb7+SUQuoOVhrT9G7RvyXLRKGKX70L2Gd9sYUjog6vXTqhZPy+cVaPxxHaKzRIUSIECFChAgRIvyPheFbO3RHSanVlC08S96OTMKzo34/6vf263MPA4R5ngWtHWa6hkYPURAiRIgQIUKECBEiHCp0/897YfRweaEVFe7691S8HuVc8xsVUtsFixW6btEdLv6eGfNa+FtRoVS1uvZ0eWGeDFk/RIhwmiBEiHD6IESIcPrkEsrbARvzntl9Bz2gFSO607ktddz6q6+J3x6fGOvt8QKa/O3xYwjt57UhRIgQIUKECBH+z0Lt/2aEm84d3adhEdss0d63mz7gv0LN0h0p0KLfw2m6VX8xtzJS9ldIS8MwSFgaGV8YEfvnJUKECBEiRIgQIcIvJ1SidSOu3cfVlAiNkVrEsqdnG/ip0B192JZVShrP5ZpZ08RiGJlCKOM2WkHoC0J3ECL8oBWEviB0ByHCD1rJJnzMkq3k2UgnZ1qtREkc2VPxlCUHyYsRPdNsxjzVm1+/AQizvfDh+vHHAAAAAElFTkSuQmCC" alt="alternatetext"> 
+    <p>I make Youtube Videos, starting From April 26 </p>
+    <p><a href="https://www.youtube.com/channel/UCOeg1qCVKxC6nQeMbVfzaWw">My YouTube</a> </p>
+    <h3>Tips</h3>
+    <p>Some Links which can support you in the creation of a simple website and customise as you want !!.</p>
+    <p><a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_example_website">Customise Code here and Copy_paste Into GitHUB</a><br>
+    <p><a href="github.com">GitHUB</a><br>
+    <p><a href="https://www.w3schools.com/html/default.asp">All HTML codes for Elements</a><br>
+  </div>
+  <div class="main">
+    <h2>Link : How To add a HYPERLINK( Normal Link )</h2>
+    <h5>Check This Out!! April 25, 14:25 hours</h5>
+    <img src="https://qph.fs.quoracdn.net/main-qimg-67615bd1c41490a9200cac3ea1179e99" alt="alternatetext">
+    <p>Usage..</p>
+    <p>Social Media :- Facebook, Instagram And Twitter<br>
+    Youtube :- Videos and Channel<br>
+    Music :- BandLabs and StreamLABS</p>
+    <br>
+    <h2>Image : Adding</h2>
+    <h5>Way to add an image in an HTML website, Sep 2, 2017</h5>
+    <img src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2016/08/inserting-the-code-into-html-php-file-1024x488.png">
+    <p>How to insert image link..</p>
+    <p>Right-Click on the image and copy the image src (source) or image location and paste after img src = .</p>
+    <h2>All the other blocks will be found <a href="https://www.w3schools.com/html/default.asp">here</a>.</h2>
+    
+
+<div class="footer">
+  <h2>Follow These Tips To Create A HTML Website<br>
+  I wish you all the best in the creation of your website<br>
+  Thanks<br>
+  I will soon create another website on other stuff<br>
+  Bye <br>
+         <br>
+     \-|-/</h2>
+</div>
+
+</body>
+</html>
